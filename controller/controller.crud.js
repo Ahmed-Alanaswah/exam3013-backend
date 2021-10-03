@@ -49,7 +49,7 @@ const updateFavGame = async (req, res) => {
 		data.description = updateData.description;
 		data.save();
 	});
-	let data = await gameModel.findOne({});
+	let data = await gameModel.find({});
 	res.send(data);
 };
 module.exports = { createFavGAme, getFavGame, deleteFavGame, updateFavGame };
